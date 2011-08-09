@@ -8,7 +8,7 @@ module Mocha
     
     module TestUnit
       
-      module GemVersion203To209
+      module GemVersion230To231
         def self.included(mod)
           $stderr.puts "Monkey patching Test::Unit gem >= v2.0.3 and <= v2.0.9" if $options['debug']
         end
