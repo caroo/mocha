@@ -5,6 +5,7 @@ if !Test::Unit::TestCase.ancestors.include?(Mocha::API)
   require 'mocha/integration/test_unit/gem_version_200'
   require 'mocha/integration/test_unit/gem_version_201_to_202'
   require 'mocha/integration/test_unit/gem_version_203_to_209'
+  require 'mocha/integration/test_unit/gem_version_230_to_231'
   require 'mocha/integration/test_unit/ruby_version_185_and_below'
   require 'mocha/integration/test_unit/ruby_version_186_and_above'
   
