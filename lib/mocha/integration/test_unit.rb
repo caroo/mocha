@@ -41,9 +41,14 @@ if !Test::Unit::TestCase.ancestors.include?(Mocha::API)
           include Mocha::Integration::TestUnit::GemVersion201To202
         elsif (test_unit_version >= '2.0.3') && (test_unit_version <= '2.0.9')
           include Mocha::Integration::TestUnit::GemVersion203To209
-        elsif (test_unit_version > '2.0.9')
+        elsif (test_unit_version > '2.0.9') && (test_unit_version < '2.3.0')
           $stderr.puts "*** Test::Unit integration has not been verified but patching anyway ***" if $options['debug']
           include Mocha::Integration::TestUnit::GemVersion203To209
+        elsif (test_unit_version >= '2.3.0') && (test_unit_version <= '2.3.1')
+          include Mocha::Integration::TestUnit::GemVersion230To231
+        elsif (test_unit_version > '2.3.1')
+          $stderr.puts "*** Test::Unit integration has not been verified but patching anyway ***" if $options['debug']
+          include Mocha::Integration::TestUnit::GemVersion230To231
         else
           $stderr.puts "*** No Mocha integration for Test::Unit version ***" if $options['debug']
         end
